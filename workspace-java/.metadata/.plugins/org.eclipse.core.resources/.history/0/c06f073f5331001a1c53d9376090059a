@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Uri1143 {
+	
+	public static void main(String args[]) {
+		
+		
+		Scanner teclado;
+		teclado = new Scanner(System.in);
+		int linhas;
+		int j;
+		
+		linhas = teclado.nextInt();
+		
+		for(int i=0;i<linhas;i++) {
+			for(j=1;j<4;j++) {			
+				System.out.print(j);
+			}
+			System.out.print("\n");
+			j++;
+		}
+		
+		teclado.close();
+		
+		
+	}
+
+}

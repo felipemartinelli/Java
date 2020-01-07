@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Uri1164 {
+	
+	public static void main(String args[]) {
+		
+		Scanner teclado = new Scanner(System.in);
+		int numvezes, num[] = null, somaDivi = 0;
+		
+		numvezes     = teclado.nextInt();
+		
+		System.out.println( numvezes + "eh perfeito");
+	
+		for(int i=0;i<numvezes;i++) {
+			num[i] = teclado.nextInt();				
+		}
+		
+		for(int i=0;i<numvezes;i++) {
+			if(num[i] % i == 0) {
+				somaDivi += i;
+			}
+		}
+		
+		for(int i=0;i>numvezes;i++)
+		{
+			if(somaDivi == num[i]) {
+				System.out.println( num[i] + "eh perfeito");
+			}
+			else {
+				System.out.println( num[i] + "nao eh perfeito");
+			}
+		}		
+		
+		teclado.close();
+	}
+
+}

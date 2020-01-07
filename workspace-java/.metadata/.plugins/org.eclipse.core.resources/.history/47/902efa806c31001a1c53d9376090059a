@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Uri1047 {
+
+	public static void main(String args[]) {
+		
+		Scanner teclado = new Scanner(System.in);
+		
+		int horaInicial, minutoInicial, horaFinal, minutoFinal, w, x, y, z;
+		
+		horaInicial     = teclado.nextInt();
+		minutoInicial   = teclado.nextInt();
+		horaFinal       = teclado.nextInt();
+		minutoFinal     = teclado.nextInt();
+		
+		
+		w= 24-horaInicial+horaFinal;
+		x= horaFinal-horaInicial;
+		y= 60-minutoInicial+minutoFinal;
+		z= minutoFinal-minutoInicial;
+
+				if (horaInicial>23 || horaFinal>23 || minutoInicial>60 || minutoFinal>60)
+				{
+					System.out.println("Um ou mais valores inseridos não corresponde ao formato Horas:Minutos.\nOu ifja, de 0 a 23 Horas e de 0 a 60 Minutos"); 
+				}
+					else
+					{
+					if (horaInicial==0 && horaFinal==0 || horaFinal==horaInicial && minutoFinal==minutoInicial)
+						{
+						System.out.println("O jogo durou 24 hora(s)\n");
+						}
+					else
+						{
+							if (horaInicial>horaFinal)
+								{
+									System.out.println("O jogo durou "+ w+ " hora(s) e "+ y+ " minutos\n");
+								}
+							else
+								{	
+									if (horaFinal-horaInicial==1 && minutoInicial>minutoFinal || horaFinal-horaInicial==0 && minutoInicial>minutoFinal)
+										{	
+											System.out.println("O jogo durou " + 0 + " horas(s) e " + 60- (minutoInicial-minutoFinal) + " minutos\n");
+										}
+									else
+										{
+										System.out.println("O jogo durou "+ x+ " horas(s) e "+ z+ " minutos\n");
+										}
+								}
+						}
+					}
+		
+	}
+	
+}

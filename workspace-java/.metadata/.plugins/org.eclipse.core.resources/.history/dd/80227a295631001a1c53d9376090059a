@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Uri1101 {
+
+	public static void main(String args[]) {
+
+		Scanner teclado;
+		int m, n, maior = 0, menor = 0;
+		
+		teclado = new Scanner(System.in);
+		
+		m = teclado.nextInt();
+		n = teclado.nextInt();
+		
+		if(m > n) {
+			maior = m;
+			menor = n;
+		}
+		else if(n > m){
+			maior = n;
+			menor = m;
+		}
+		else {
+			System.out.println("Numeros Iguais ou invalidos");
+		}
+		
+		for(int i=menor;i<=maior;i++) {
+			System.out.print(i + " ");
+		}
+		
+		
+		
+		
+		teclado.close();
+	}
+
+}

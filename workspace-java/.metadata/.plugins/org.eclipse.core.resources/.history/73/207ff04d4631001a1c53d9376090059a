@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Uri1045 {
+	
+	public static void main(String args[]) {
+		
+		double a,b,c;
+		
+		int i;
+		double aux;
+		
+		Scanner teclado;
+		teclado = new Scanner(System.in);
+		
+			a = teclado.nextDouble();
+			b = teclado.nextDouble();
+			c = teclado.nextDouble();
+			
+		double vet[] = {a,b,c};
+		
+		 for(i = 0; i<3; i++){
+		        for(int j = 0; j<2; j++){
+		            if(vet[j] > vet[j + 1]){
+		                aux = vet[j];
+		                vet[j] = vet[j+1];
+		                vet[j+1] = aux;
+		            }
+		       }
+		 }
+		 
+		 System.out.println("Vetor organizado:");
+		    for(i = 0; i<3; i++){
+		        System.out.println(" "+vet[i]);
+		 }
+		
+		
+		teclado.close();
+	}
+
+}
