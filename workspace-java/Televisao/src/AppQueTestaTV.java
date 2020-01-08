@@ -10,12 +10,12 @@ public class AppQueTestaTV {
 		
 		Televisao t1 = new Televisao();
 
-		t1.marca = "Sony";
-		t1.voltagem = 110;
-		t1.tamanho = 32;
-		t1.ligada = false;
-		t1.canal = 5;
-		t1.volume = 2;
+		t1.setMarca("Sony");
+		t1.setVoltagem(110);
+		t1.setTamanho(32);
+		t1.setLigada(false);
+		t1.setCanal(5);
+		t1.setVolume(2);
 		
 		do {
 			System.out.println("\n***************************");
